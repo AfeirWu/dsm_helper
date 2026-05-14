@@ -1,0 +1,53 @@
+name: Build Debug APK
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: 2.0.5
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Generate debug keystore (required by build.gradle)
+        run: |
+          mkdir -p android/app
+          if [ ! -f android/key.properties ]; then
+            echo "keyAlias=androiddebugkey" > android/key.properties
+            echo "keyPassword=android" >> android/key.properties
+            echo "storePassword=android" >> android/key.properties
+            echo "storeFile=debug.keystore" >> android/key.properties
+          fi
+
+      - name: Generate debug keystore file
+        run: |
+          if [ ! -f android/app/debug.keystore ]; then
+            keytool -genkeypair -v -keystore android/app/debug.keystore \
+              -alias androiddebugkey -keyalg RSA -keysize 2048 -validity 10000 \
+              -storepass android -keypass android \
+              -dname "CN=Debug, OU=Debug, O=Debug, L=Debug, ST=Debug, C=US"
+          fi
+
+      - name: Build debug APK
+        run: flutter build apk --debug
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: debug-apk
+          path: build/app/outputs/flutter-apk/app-debug.apk
+          retention-days: 7
