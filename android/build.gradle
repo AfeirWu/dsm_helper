@@ -1,14 +1,11 @@
 buildscript {
     ext.kotlin_version = '1.4.10'
     repositories {
-//        google()
         mavenCentral()
-//        maven { url 'https://repo1.maven.org/maven2/' }
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/jcenter' }
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
-        maven { url "http://download.flutter.io" }
-//        jcenter()
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://storage.googleapis.com/download.flutter.io' }
     }
 
     dependencies {
@@ -19,14 +16,11 @@ buildscript {
 
 allprojects {
     repositories {
-//        google()
         mavenCentral()
-//        maven { url 'https://repo1.maven.org/maven2/' }
         maven { url 'https://maven.aliyun.com/repository/google' }
         maven { url 'https://maven.aliyun.com/repository/jcenter' }
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public' }
-        maven { url "http://download.flutter.io" }
-//        jcenter()
+        maven { url 'https://maven.aliyun.com/repository/central' }
+        maven { url 'https://storage.googleapis.com/download.flutter.io' }
     }
 }
 
