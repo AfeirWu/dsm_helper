@@ -19,6 +19,23 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version: 2.0.5
+
+      - name: Create keystore for debug build
+        run: |
+          mkdir -p android/app
+          # Generate debug keystore
+          keytool -genkeypair -v -keystore android/app/debug.keystore \
+            -alias androiddebugkey -keyalg RSA -keysize 2048 -validity 10000 \
+            -storepass android -keypass android \
+            -dname "CN=Debug, OU=Debug, O=Debug, L=Debug, ST=Debug, C=US"
+          # Create key.properties pointing to it
+          cat > android/key.properties << 'EOF'
+keyAlias=androiddebugkey
+keyPassword=android
+storePassword=android
+storeFile=app/debug.keystore
+EOF
 
       - name: Install dependencies
         run: flutter pub get
