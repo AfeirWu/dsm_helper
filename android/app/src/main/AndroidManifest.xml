@@ -7,7 +7,6 @@
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.USE_FINGERPRINT"/>
     <application
-        android:name="io.flutter.app.FlutterApplication"
         android:label="群晖助手"
         android:usesCleartextTraffic="true"
         android:requestLegacyExternalStorage="true"
