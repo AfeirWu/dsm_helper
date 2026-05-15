@@ -12,7 +12,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:neumorphic/neumorphic.dart';
 import 'package:package_info/package_info.dart';
-import 'package:vibrate/vibrate.dart';
+import 'vibrate_compat.dart';
 
 class Login extends StatefulWidget {
   final Map server;

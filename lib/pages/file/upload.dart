@@ -10,7 +10,7 @@ import 'package:file_picker/file_picker.dart' hide FileType;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:neumorphic/neumorphic.dart';
-import 'package:vibrate/vibrate.dart';
+import 'vibrate_compat.dart';
 import 'package:wechat_assets_picker/wechat_assets_picker.dart';
 
 class Upload extends StatefulWidget {

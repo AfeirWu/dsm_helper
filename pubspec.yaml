@@ -60,7 +60,6 @@ dependencies:
   xterm: ^2.0.0
   umeng_analytics_plugin: ^1.0.3
   photo_manager: ^1.2.5
-  vibrate: ^0.0.4
   url_launcher: ^6.0.9
   http: ^0.13.3
   local_auth: ^1.1.6
