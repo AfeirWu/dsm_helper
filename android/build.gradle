@@ -24,21 +24,6 @@ rootProject.buildDir = '../build'
 subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
 }
-subprojects {
-    project.evaluationDependsOn(':app')
-}
-
-subprojects {
-    afterEvaluate { project ->
-        if (project.hasProperty('android')) {
-            project.android {
-                if (namespace == null || namespace.isEmpty()) {
-                    namespace project.group ?: "fit.flutter.${project.name.replace('-', '_')}"
-                }
-            }
-        }
-    }
-}
 
 subprojects {
     configurations.all {
