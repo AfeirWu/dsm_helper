@@ -136,7 +136,7 @@ void main() async {
 
 class AppAnalysis extends NavigatorObserver {
   @override
-  void didPush(Route<dynamic> route, Route<dynamic> previousRoute) {
+  void didPush(Route<dynamic> route, Route<dynamic>? previousRoute) {
     if (previousRoute != null && route != null) {
       if (previousRoute.settings.name != null) {
         UmengAnalyticsPlugin.pageEnd(previousRoute.settings.name);
