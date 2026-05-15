@@ -10,7 +10,7 @@ import 'package:neumorphic/neumorphic.dart';
 
 class OtpBind extends StatefulWidget {
   final String username;
-  final String email;
+  final String? email;
   OtpBind(this.username, this.email);
   @override
   _OtpBindState createState() => _OtpBindState();
@@ -18,9 +18,9 @@ class OtpBind extends StatefulWidget {
 
 class _OtpBindState extends State<OtpBind> {
   TextEditingController _emailController = TextEditingController();
-  String email;
+  String? email;
   int step = 0;
-  Uint8List qrData;
+  Uint8List? qrData;
   String key = "";
   String code = "";
   bool emailSaving = false;

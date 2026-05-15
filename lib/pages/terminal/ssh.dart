@@ -18,8 +18,8 @@ class Ssh extends StatefulWidget {
 }
 
 class _SshState extends State<Ssh> {
-  Terminal terminal;
-  SSHClient client;
+  Terminal? terminal;
+  SSHClient? client;
   @override
   void initState() {
     terminal = Terminal(onInput: onInput, theme: TerminalThemes.whiteOnBlack);

@@ -13,7 +13,7 @@ class LogSetting extends StatefulWidget {
 }
 
 class _LogSettingState extends State<LogSetting> {
-  Map setting;
+  Map? setting;
   bool loading = true;
   @override
   void initState() {

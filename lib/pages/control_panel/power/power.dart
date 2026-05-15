@@ -21,9 +21,9 @@ class _PowerState extends State<Power> with SingleTickerProviderStateMixin {
   Map powerRecovery;
   Map beepControl;
   Map fanSpeed;
-  Map hibernation;
-  Map ups;
-  Map led;
+  Map hibernation?;
+  Map ups?;
+  Map led?;
   List powerTasks = [];
 
   List dataList = [

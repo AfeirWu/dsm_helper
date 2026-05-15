@@ -17,7 +17,7 @@ class About extends StatefulWidget {
 
 class _AboutState extends State<About> {
   bool checking = false;
-  PackageInfo packageInfo;
+  PackageInfo? packageInfo;
   String account = "challengerv";
   @override
   void initState() {

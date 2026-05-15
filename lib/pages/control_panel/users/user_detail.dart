@@ -8,25 +8,25 @@ import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:neumorphic/neumorphic.dart';
 
 class UserDetail extends StatefulWidget {
-  final Map user;
+  final Map? user;
   UserDetail(this.user);
   @override
   _UserDetailState createState() => _UserDetailState();
 }
 
 class _UserDetailState extends State<UserDetail> with SingleTickerProviderStateMixin {
-  TabController _tabController;
+  TabController? _tabController;
   TextEditingController _nameController = TextEditingController();
   TextEditingController _descriptionController = TextEditingController();
   TextEditingController _emailController = TextEditingController();
-  Map user;
+  Map? user;
   List groups = [];
   List bandwidthControl = [];
   List volumes = [];
   List quotas = [];
   List permissions = [];
-  String password;
-  String confirmPassword;
+  String? password;
+  String? confirmPassword;
   @override
   void initState() {
     _tabController = TabController(length: 6, vsync: this);

@@ -15,10 +15,10 @@ import 'vibrate_compat.dart';
 
 class DownloadInfo {
   String taskId;
-  DownloadTaskStatus status;
+  DownloadTaskStatus status?;
   int progress;
-  String url;
-  String filename;
+  String url?;
+  String filename?;
   String savedDir;
   int timeCreated;
 
@@ -40,7 +40,7 @@ class DownloadState extends State<Download> {
   List<DownloadInfo> tasks = [];
   bool loading = true;
   List<DownloadInfo> selectedTasks = [];
-  Timer timer;
+  Timer timer?;
   bool multiSelect = false;
 
   ReceivePort _port = ReceivePort();
@@ -75,7 +75,7 @@ class DownloadState extends State<Download> {
         tasks.forEach((task) {
           if (task.taskId == id) {
             setState(() {
-              task.status = status;
+              task.status = status?;
               task.progress = progress;
             });
           }

@@ -5,7 +5,7 @@ import 'package:neumorphic/neumorphic.dart';
 typedef CallBack = Function(int);
 
 class NeuPicker extends StatefulWidget {
-  final int value;
+  final int? value;
   final List data;
   final CallBack onConfirm;
   NeuPicker(this.data, {this.value: 0, this.onConfirm});
@@ -14,8 +14,8 @@ class NeuPicker extends StatefulWidget {
 }
 
 class _NeuPickerState extends State<NeuPicker> {
-  FixedExtentScrollController _controller;
-  int value;
+  FixedExtentScrollController? _controller;
+  int? value;
   @override
   void initState() {
     value = widget.value ?? 0;

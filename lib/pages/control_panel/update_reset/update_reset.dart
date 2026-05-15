@@ -16,7 +16,7 @@ class _UpdateResetState extends State<UpdateReset> with SingleTickerProviderStat
   String firmwareDate = "";
   String firmwareVer = "";
   String model = "";
-  Map update;
+  Map update?;
   bool checking = true;
   @override
   void initState() {

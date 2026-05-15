@@ -19,7 +19,7 @@ class _SharedFoldersState extends State<SharedFolders> {
   String msg = "";
   List folders = [];
   List volumes = [];
-  Timer timer;
+  Timer timer?;
   @override
   void initState() {
     getVolumes();
