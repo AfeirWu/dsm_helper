@@ -1,4 +1,3 @@
-import 'package:draggable_scrollbar/draggable_scrollbar.dart';
 import 'package:dsm_helper/widgets/neu_back_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_highlight/flutter_highlight.dart';
@@ -74,9 +73,7 @@ class _TextEditorState extends State<TextEditor> {
         leading: AppBackButton(context),
         title: Text("查看文件"),
       ),
-      body: DraggableScrollbar.semicircle(
-        controller: _scrollController,
-        child: ListView(
+      body: ListView(
           controller: _scrollController,
           children: [
             HighlightView(

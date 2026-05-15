@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:android_intent/android_intent.dart';
 import 'package:connectivity/connectivity.dart';
-import 'package:draggable_scrollbar/draggable_scrollbar.dart';
 import 'package:dsm_helper/pages/common/pdf_viewer.dart';
 import 'package:dsm_helper/pages/common/text_editor.dart';
 import 'package:dsm_helper/pages/file/favorite.dart';
@@ -2955,7 +2954,7 @@ class FilesState extends State<Files> {
                 ? Stack(
                     children: [
                       listType == ListType.list
-                          ? DraggableScrollbar.semicircle(
+                          ? ListView(
                               backgroundColor: Theme.of(context).scaffoldBackgroundColor,
                               scrollbarTimeToFade: Duration(seconds: 1),
                               controller: _fileScrollController,
@@ -2970,7 +2969,7 @@ class FilesState extends State<Files> {
                             )
                           : Container(
                               width: double.infinity,
-                              child: DraggableScrollbar.semicircle(
+                              child: ListView(
                                 backgroundColor: Theme.of(context).scaffoldBackgroundColor,
                                 scrollbarTimeToFade: Duration(seconds: 1),
                                 controller: _fileScrollController,

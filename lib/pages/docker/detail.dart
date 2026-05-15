@@ -1,4 +1,3 @@
-import 'package:draggable_scrollbar/draggable_scrollbar.dart';
 import 'package:dsm_helper/util/function.dart';
 import 'package:dsm_helper/widgets/bubble_tab_indicator.dart';
 import 'package:dsm_helper/widgets/label.dart';
@@ -730,7 +729,7 @@ class _ContainerDetailState extends State<ContainerDetail> with SingleTickerProv
                           ),
                           Expanded(
                             flex: 2,
-                            child: DraggableScrollbar.semicircle(
+                            child: ListView(
                               backgroundColor: Theme.of(context).scaffoldBackgroundColor,
                               scrollbarTimeToFade: Duration(seconds: 1),
                               controller: _scrollController,

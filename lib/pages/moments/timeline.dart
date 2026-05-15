@@ -1,4 +1,3 @@
-import 'package:draggable_scrollbar/draggable_scrollbar.dart';
 import 'package:dsm_helper/pages/common/preview.dart';
 import 'package:dsm_helper/util/function.dart';
 import 'package:dsm_helper/util/moments_api.dart';
@@ -251,7 +250,7 @@ class _TimelineState extends State<Timeline> {
               ),
             )
           : timeline.length > 0
-              ? DraggableScrollbar.semicircle(
+              ? ListView(
                   labelTextBuilder: (position) {
                     var line = timeline.where((element) => element['position']['start'] <= position && element['position']['end'] >= position).toList();
                     if (line.length > 0) {
