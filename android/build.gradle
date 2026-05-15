@@ -1,15 +1,13 @@
 buildscript {
-    ext.kotlin_version = '1.4.10'
+    ext.kotlin_version = '1.8.22'
     repositories {
         mavenCentral()
-        maven { url 'https://maven.aliyun.com/repository/google' }
-        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        google()
         maven { url 'https://maven.aliyun.com/repository/central' }
-        maven { url 'https://storage.googleapis.com/download.flutter.io' }
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
+        classpath 'com.android.tools.build:gradle:7.4.2'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -17,10 +15,8 @@ buildscript {
 allprojects {
     repositories {
         mavenCentral()
-        maven { url 'https://maven.aliyun.com/repository/google' }
-        maven { url 'https://maven.aliyun.com/repository/jcenter' }
+        google()
         maven { url 'https://maven.aliyun.com/repository/central' }
-        maven { url 'https://storage.googleapis.com/download.flutter.io' }
     }
 }
 
