@@ -28,7 +28,7 @@ def keystorePropertiesFile = rootProject.file("key.properties")
 def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 android {
-    namespace 'fit.flutter.dsm_helper'
+    namespace = 'fit.flutter.dsm_helper'
     compileSdkVersion 34
 
     sourceSets {
