@@ -18,7 +18,7 @@ import 'package:package_info/package_info.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:path_provider/path_provider.dart';
-import 'vibrate_compat.dart';
+import 'package:dsm_helper/vibrate_compat.dart';
 export 'package:dsm_helper/util/api.dart';
 export 'package:dsm_helper/extensions/datetime.dart';
 export 'package:dsm_helper/extensions/string.dart';

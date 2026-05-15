@@ -11,14 +11,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:neumorphic/neumorphic.dart';
-import 'vibrate_compat.dart';
+import 'package:dsm_helper/vibrate_compat.dart';
 
 class DownloadInfo {
   String taskId;
-  DownloadTaskStatus status?;
+  DownloadTaskStatus status;
   int progress;
-  String url?;
-  String filename?;
+  String url;
+  String filename;
   String savedDir;
   int timeCreated;
 
@@ -40,7 +40,7 @@ class DownloadState extends State<Download> {
   List<DownloadInfo> tasks = [];
   bool loading = true;
   List<DownloadInfo> selectedTasks = [];
-  Timer timer?;
+  Timer? timer;
   bool multiSelect = false;
 
   ReceivePort _port = ReceivePort();
@@ -75,7 +75,7 @@ class DownloadState extends State<Download> {
         tasks.forEach((task) {
           if (task.taskId == id) {
             setState(() {
-              task.status = status?;
+              task.status = status;
               task.progress = progress;
             });
           }

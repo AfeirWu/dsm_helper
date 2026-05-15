@@ -7,7 +7,7 @@ import 'package:dsm_helper/widgets/neu_back_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:neumorphic/neumorphic.dart';
-import 'vibrate_compat.dart';
+import 'package:dsm_helper/vibrate_compat.dart';
 
 class Power extends StatefulWidget {
   @override
@@ -21,9 +21,9 @@ class _PowerState extends State<Power> with SingleTickerProviderStateMixin {
   Map powerRecovery;
   Map beepControl;
   Map fanSpeed;
-  Map hibernation?;
-  Map ups?;
-  Map led?;
+  Map? hibernation;
+  Map? ups;
+  Map? led;
   List powerTasks = [];
 
   List dataList = [

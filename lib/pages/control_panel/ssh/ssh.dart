@@ -5,7 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:neumorphic/neumorphic.dart';
-import 'vibrate_compat.dart';
+import 'package:dsm_helper/vibrate_compat.dart';
 
 class SshSetting extends StatefulWidget {
   @override

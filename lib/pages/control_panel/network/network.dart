@@ -19,10 +19,10 @@ class _NetworkState extends State<Network> with SingleTickerProviderStateMixin {
   TextEditingController _proxyHttpHostController = TextEditingController();
   TextEditingController _proxyHttpPortController = TextEditingController();
   TabController _tabController;
-  Map network?;
-  Map proxy?;
-  Map gateway?;
-  Map dsm?;
+  Map? network;
+  Map? proxy;
+  Map? gateway;
+  Map? dsm;
   bool loading = true;
   @override
   void initState() {

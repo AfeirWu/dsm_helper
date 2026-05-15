@@ -3,7 +3,7 @@ import 'package:dsm_helper/widgets/file_icon.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:neumorphic/neumorphic.dart';
-import 'vibrate_compat.dart';
+import 'package:dsm_helper/vibrate_compat.dart';
 
 class Favorite extends StatefulWidget {
   final Function callback;

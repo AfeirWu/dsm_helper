@@ -20,10 +20,10 @@ class SystemInfo extends StatefulWidget {
 class _SystemInfoState extends State<SystemInfo> with SingleTickerProviderStateMixin {
   TabController _tabController;
   List usbDev;
-  List nifs?;
+  List? nifs;
   List volumes = [];
   List disks = [];
-  Map network?;
+  Map? network;
   bool loadingDisks = false;
   @override
   void initState() {

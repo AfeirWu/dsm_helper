@@ -6,7 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:gesture_password/gesture_password.dart';
 import 'package:local_auth/auth_strings.dart';
 import 'package:local_auth/local_auth.dart';
-import 'vibrate_compat.dart';
+import 'package:dsm_helper/vibrate_compat.dart';
 import 'package:local_auth/error_codes.dart' as auth_error;
 
 class AuthPage extends StatefulWidget {

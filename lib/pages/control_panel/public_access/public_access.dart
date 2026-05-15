@@ -21,7 +21,7 @@ class _PublicAccessState extends State<PublicAccess> with SingleTickerProviderSt
   List records = [];
   String nextUpdateTime = "";
   List ips = [];
-  Timer timer?;
+  Timer? timer;
   Map statusStr = {
     "service_ddns_normal": "正常",
     "service_ddns_error_unknown": "联机失败",

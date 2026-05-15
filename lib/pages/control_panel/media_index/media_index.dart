@@ -15,7 +15,7 @@ class _MediaIndexState extends State<MediaIndex> {
   String thumbnailQuality = "";
   bool mobileEnabled;
   List packages = [];
-  Timer timer?;
+  Timer? timer;
   @override
   void initState() {
     getData();

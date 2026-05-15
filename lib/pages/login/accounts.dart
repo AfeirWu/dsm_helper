@@ -17,7 +17,7 @@ class Accounts extends StatefulWidget {
 
 class _AccountsState extends State<Accounts> {
   List servers = [];
-  Timer timer?;
+  Timer? timer;
   @override
   void initState() {
     getData();
